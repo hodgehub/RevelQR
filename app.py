@@ -8,10 +8,15 @@ HTML = """
 <!DOCTYPE html>
 <html>
 <body style="margin:0;background:#000;overflow:hidden">
-  <video autoplay muted playsinline loop
+  <video id="v" autoplay playsinline loop
     style="width:100vw;height:100vh;object-fit:cover">
     <source src="/video" type="video/mp4">
   </video>
+  <script>
+    var v = document.getElementById('v');
+    v.volume = 0.5;
+    v.play();
+  </script>
 </body>
 </html>
 """
